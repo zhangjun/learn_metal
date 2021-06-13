@@ -1,0 +1,6 @@
+
+func main() {
+	stat()
+}
+
+main()

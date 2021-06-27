@@ -1,0 +1,702 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		679FA74AA9924AB79B2FBAF9 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 08A22973DBBA453DA84AE037 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				9955E4807AC3123F8F496073 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		7E57E84BBD874103A021E6D0 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8F365FF25E814EF5B7F41A1C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				1417BB1E2C9BDB2218888563 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				F96174A732EA4B85AD6331D1 /* PBXTargetDependency */,
+				FD18CEE23E834720AA571430 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2682536EFDDE45888F5C7F3C /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/main.swift */ = {isa = PBXBuildFile; fileRef = 668E5F42CB3B401FA09AB109 /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/main.swift */; };
+		BF0DF53E0B314653AA1B375D /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D6266F0697624F60A178A155 /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/CMakeLists.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		89272CD8116B4E01AC99E248 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		A401E76E6BED4E30A4B004B5 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		BC23BF3BCA3B47B5BB53145E /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		FA41C80B932F45F68524A4F0 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		3B5B90F855B74ADE9C0EF066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031420FD27BF4F5FA4AA08DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 679FA74AA9924AB79B2FBAF9;
+			remoteInfo = ZERO_CHECK;
+		};
+		D74233E01DF345018859F1FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031420FD27BF4F5FA4AA08DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B093491689814C16A564D24A;
+			remoteInfo = basic;
+		};
+		EC26C68BC74544FFA3AAEFB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031420FD27BF4F5FA4AA08DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 679FA74AA9924AB79B2FBAF9;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		082A1A0CFC384A02A2277887 /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0C054C55EDF2495796EBEC83 /* basic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = basic; sourceTree = BUILT_PRODUCTS_DIR; };
+		668E5F42CB3B401FA09AB109 /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/main.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; name = main.swift; path = main.swift; sourceTree = SOURCE_ROOT; };
+		D6266F0697624F60A178A155 /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DBBC453C2BC4CC7B8ABD4DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CFA554CF3E34C03B195CAFF /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		3885B8A6B2C847589BF85601 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46CC967F6BD44CE4B3EE1D57 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				D6266F0697624F60A178A155 /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/CMakeLists.txt */,
+				668E5F42CB3B401FA09AB109 /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/main.swift */,
+			);
+			name = basic;
+			sourceTree = "<group>";
+		};
+		94A56A3914044FB7AAFD8323 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				1CFA554CF3E34C03B195CAFF /* CMake Rules */,
+				082A1A0CFC384A02A2277887 /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		A5CFE01CA91F4AC2BE6CF60A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C054C55EDF2495796EBEC83 /* basic */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F879B3D7C758424788C94E87 = {
+			isa = PBXGroup;
+			children = (
+				46CC967F6BD44CE4B3EE1D57 /* basic */,
+				94A56A3914044FB7AAFD8323 /* ALL_BUILD */,
+				A5CFE01CA91F4AC2BE6CF60A /* Products */,
+				3885B8A6B2C847589BF85601 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B093491689814C16A564D24A /* basic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA990141D7324002A8CF3111 /* Build configuration list for PBXNativeTarget "basic" */;
+			buildPhases = (
+				45019B35DD4D4421914F9621 /* Sources */,
+				2DBBC453C2BC4CC7B8ABD4DB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C2CFDC7C8A041D3A66F78F0 /* PBXTargetDependency */,
+			);
+			name = basic;
+			productName = basic;
+			productReference = 0C054C55EDF2495796EBEC83 /* basic */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		031420FD27BF4F5FA4AA08DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 5D18EF133396488EA2571259 /* Build configuration list for PBXProject "basic" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				BC23BF3BCA3B47B5BB53145E /* Debug */,
+				89272CD8116B4E01AC99E248 /* Release */,
+				FA41C80B932F45F68524A4F0 /* MinSizeRel */,
+				A401E76E6BED4E30A4B004B5 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = F879B3D7C758424788C94E87;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				7E57E84BBD874103A021E6D0 /* ALL_BUILD */,
+				679FA74AA9924AB79B2FBAF9 /* ZERO_CHECK */,
+				B093491689814C16A564D24A /* basic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1417BB1E2C9BDB2218888563 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9955E4807AC3123F8F496073 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build
+  make -f /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build
+  make -f /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build
+  make -f /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build
+  make -f /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45019B35DD4D4421914F9621 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2682536EFDDE45888F5C7F3C /* /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/main.swift */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C2CFDC7C8A041D3A66F78F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 679FA74AA9924AB79B2FBAF9 /* ZERO_CHECK */;
+			targetProxy = 3B5B90F855B74ADE9C0EF066 /* PBXContainerItemProxy */;
+		};
+		F96174A732EA4B85AD6331D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B093491689814C16A564D24A /* basic */;
+			targetProxy = D74233E01DF345018859F1FC /* PBXContainerItemProxy */;
+		};
+		FD18CEE23E834720AA571430 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 679FA74AA9924AB79B2FBAF9 /* ZERO_CHECK */;
+			targetProxy = EC26C68BC74544FFA3AAEFB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12027476A0B8451D85DA3A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		2CF613CAF57F48A4906FBF1B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk;
+				SWIFT_VERSION = 4.0;
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		3E5E792D04224627AB6E89DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		4A49C50D5A3F49D7B194981B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ("$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = ("$(inherited)");
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				OTHER_SWIFT_FLAGS = "   ";
+				PRODUCT_NAME = basic;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		51E4AF0163EB4DD4BCB7FF0D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		95A523FC64E542DBABE0DC0F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		97E89321EB7C4E9CAFA693F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ("$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = ("$(inherited)");
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				OTHER_SWIFT_FLAGS = "   ";
+				PRODUCT_NAME = basic;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		A14032BA78644B69982D37F3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A68B8E5820444F1EA9EA5183 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B6FDD1F8F7B647DA9209D8F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		B96700DDD1924B1881345F0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk;
+				SWIFT_VERSION = 4.0;
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/build;
+			};
+			name = Debug;
+		};
+		BC47565FA4B043BCA8B45362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		C32F889AAC344EB6B80E9D59 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk;
+				SWIFT_VERSION = 4.0;
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/build;
+			};
+			name = MinSizeRel;
+		};
+		C39CE213925D41E393159C5A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ("$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = ("$(inherited)");
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				OTHER_SWIFT_FLAGS = "      ";
+				PRODUCT_NAME = basic;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CDFF1CF45BA34EDEA4531CC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk;
+				SWIFT_VERSION = 4.0;
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build/build;
+			};
+			name = Release;
+		};
+		E392DA2AACAA4FEFBC4AAE59 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ("$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = ("$(inherited)");
+				OTHER_LDFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-Osize ";
+				PRODUCT_NAME = basic;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/apple/Downloads/zhangjun/learn/learn_metal/swift/basic/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08A22973DBBA453DA84AE037 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC47565FA4B043BCA8B45362 /* Debug */,
+				12027476A0B8451D85DA3A93 /* Release */,
+				A68B8E5820444F1EA9EA5183 /* MinSizeRel */,
+				95A523FC64E542DBABE0DC0F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5D18EF133396488EA2571259 /* Build configuration list for PBXProject "basic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B96700DDD1924B1881345F0A /* Debug */,
+				CDFF1CF45BA34EDEA4531CC9 /* Release */,
+				C32F889AAC344EB6B80E9D59 /* MinSizeRel */,
+				2CF613CAF57F48A4906FBF1B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8F365FF25E814EF5B7F41A1C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E5E792D04224627AB6E89DD /* Debug */,
+				B6FDD1F8F7B647DA9209D8F8 /* Release */,
+				A14032BA78644B69982D37F3 /* MinSizeRel */,
+				51E4AF0163EB4DD4BCB7FF0D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AA990141D7324002A8CF3111 /* Build configuration list for PBXNativeTarget "basic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97E89321EB7C4E9CAFA693F6 /* Debug */,
+				4A49C50D5A3F49D7B194981B /* Release */,
+				E392DA2AACAA4FEFBC4AAE59 /* MinSizeRel */,
+				C39CE213925D41E393159C5A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 031420FD27BF4F5FA4AA08DF /* Project object */;
+}

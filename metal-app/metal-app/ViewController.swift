@@ -7,6 +7,8 @@
 
 import UIKit
 
+// https://github.com/hollance/MobileNet-CoreML/
+
 class ViewController: UIViewController {
     @IBOutlet weak var ResultArea: UITextView!
     let metalHelper: MetalHelper = MetalHelper.shared

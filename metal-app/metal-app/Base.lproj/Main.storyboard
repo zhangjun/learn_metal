@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yh1-v9-gyU">
-                                <rect key="frame" x="248" y="468" width="57" height="22"/>
+                                <rect key="frame" x="249" y="421" width="57" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.8402127546" blue="0.97245375180000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Run" image="play" catalog="system"/>
@@ -41,11 +41,17 @@
                                     <action selector="StartRun:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0C-qd-y1J"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6WN-yN-VGg">
+                                <rect key="frame" x="36" y="505" width="342" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="CameraView" destination="6WN-yN-VGg" id="fog-hu-sjV"/>
                         <outlet property="ResultArea" destination="mM2-D1-T9u" id="e8O-je-DcW"/>
                     </connections>
                 </viewController>

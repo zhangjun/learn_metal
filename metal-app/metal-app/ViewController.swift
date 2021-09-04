@@ -6,11 +6,19 @@
 //
 
 import UIKit
+import Vision
+//import CoreMedia
+import AVFoundation
 
 // https://github.com/hollance/MobileNet-CoreML/
 
 class ViewController: UIViewController {
     @IBOutlet weak var ResultArea: UITextView!
+    @IBOutlet weak var cameraView: UIView!
+    var videoCapture: VideoCapture!
+    let semaphore = DispatchSemaphore(value: 1)
+
+
     let metalHelper: MetalHelper = MetalHelper.shared
     var inputTexture: MTLTexture!
     var outputTexture: MTLTexture!
@@ -23,6 +31,7 @@ class ViewController: UIViewController {
         if let function = lib?.makeFunction(name: "add") {
             pipeline = try? metalHelper.device.makeComputePipelineState(function: function)
         }
+        setUpCamera()
     }
 
     @IBAction func StartRun(_ sender: UIButton) {
@@ -85,5 +94,42 @@ class ViewController: UIViewController {
         }
         self.ResultArea.text = "input"
     }
+    func resizePreviewLayer() {
+        videoCapture.previewLayer?.frame = cameraView.bounds
+    }
+    
+    func setUpCamera() {
+        videoCapture = VideoCapture()
+        videoCapture.delegate = self
+        videoCapture.desiredFrameRate = 240
+        videoCapture.setUp(sessionPreset: AVCaptureSession.Preset.hd1280x720) { success in
+          if success {
+            // Add the video preview into the UI.
+            if let previewLayer = self.videoCapture.previewLayer {
+              self.cameraView.layer.addSublayer(previewLayer)
+              self.resizePreviewLayer()
+            }
+
+            // Once everything is set up, we can start capturing live video.
+            self.videoCapture.start()
+          }
+        }
+      }
+    func predict(pixelBuffer: CVPixelBuffer) {
+    }
+}
+
+extension ViewController: VideoCaptureDelegate {
+  func videoCapture(_ capture: VideoCapture, didCaptureVideoFrame pixelBuffer: CVPixelBuffer?, timestamp: CMTime) {
+    if let pixelBuffer = pixelBuffer {
+      // The semaphore will block the capture queue and drop frames when
+      // Core ML can't keep up with the camera.
+      semaphore.wait()
+
+      DispatchQueue.global().async {
+        self.predict(pixelBuffer: pixelBuffer)
+      }
+    }
+  }
 }
 

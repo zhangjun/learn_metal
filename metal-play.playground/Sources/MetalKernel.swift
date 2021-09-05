@@ -11,7 +11,7 @@ public class MetalKernel: NSObject {
     
     static let shared: MetalKernel = MetalKernel.init()
     
-    private override init() {
+    override public init() {
         device = MTLCreateSystemDefaultDevice()!
         commandQueue = device.makeCommandQueue()!
         library = device.makeDefaultLibrary()!

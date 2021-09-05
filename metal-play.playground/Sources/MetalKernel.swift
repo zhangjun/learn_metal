@@ -19,7 +19,7 @@ public class MetalKernel: NSObject {
         commandBuffer = commandQueue.makeCommandBuffer()!
         
         encoder = commandBuffer.makeComputeCommandEncoder()!
-        let funcName = "add"
+        let funcName = "compare"
         if let function = library.makeFunction(name: funcName) {
             pipeline = try? device.makeComputePipelineState(function: function)
         }
@@ -29,7 +29,7 @@ public class MetalKernel: NSObject {
     }
     
     public func Run() {
-        self.RunKernel()
+        self.RunKernel1()
     }
     func InitKernel () {
     }
@@ -53,6 +53,33 @@ public class MetalKernel: NSObject {
         let result = outputBuffer.contents().load(as: Float.self)
 
         print(String(format: "%f + %f = %f", input[0], input[1], result))
+
+    }
+    
+    func RunKernel1() {
+
+        let inputX: [Float] = [1.0, 3.0, 7.0, 3.1]
+        let inputY: [Float] = [1.0, 2.0, 5.0, 11.5]
+        encoder.setBuffer(device.makeBuffer(bytes: inputX as [Float], length: MemoryLayout<Float>.stride * inputX.count, options: []), offset: 0, index: 0)
+        encoder.setBuffer(device.makeBuffer(bytes: inputY as [Float], length: MemoryLayout<Float>.stride * inputY.count, options: []), offset: 0, index: 1)
+        let outputBuffer = device.makeBuffer(length: MemoryLayout<Float>.stride * inputX.count, options: [])!
+        encoder.setBuffer(outputBuffer, offset: 0, index: 2)
+
+        let numThreadgroups = MTLSize(width: 1, height: 1, depth: 1)
+        let threadsPerThreadgroup = MTLSize(width: 1, height: 1, depth: 1)
+        encoder.dispatchThreadgroups(numThreadgroups, threadsPerThreadgroup: threadsPerThreadgroup)
+        encoder.endEncoding()
+
+        commandBuffer.commit()
+        commandBuffer.waitUntilCompleted()
+        
+//        let result = outputBuffer.contents().bindMemory(to: Float.self, capacity: inputX.count)
+//        var data = [Float](repeating:0, count: inputX.count)
+//        for i in 0 ..< inputX.count { data[i] = result[i] }
+
+        let result = outputBuffer.contents().bindMemory(to: Float.self, capacity: inputX.count)
+
+        print(String(format: "%f, %f, %f, %f", result[0], result[1], result[2], result[3]))
 
     }
 }

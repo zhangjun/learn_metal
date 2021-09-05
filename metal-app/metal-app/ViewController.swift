@@ -40,6 +40,8 @@ class ViewController: UIViewController {
             return
         }
         if (true) {
+            var start, end : UInt64
+            start = mach_absolute_time()
             let commandBuffer = metalHelper.queue.makeCommandBuffer()
             let encoder = commandBuffer?.makeComputeCommandEncoder()
             
@@ -82,18 +84,33 @@ class ViewController: UIViewController {
             encoder?.dispatchThreadgroups(groups, threadsPerThreadgroup: threadsPerGroup)
             encoder?.endEncoding()
             
-            commandBuffer?.addCompletedHandler({(buffer) in
-                self.ResultArea.text = "input"
-            })
+//            commandBuffer?.addCompletedHandler({(buffer) in
+//                self.ResultArea.text = "input"
+//            })
             commandBuffer?.commit()
             commandBuffer?.waitUntilCompleted()
+            end = mach_absolute_time()
+            print("GPU cost: \(Double(end - start) / Double(NSEC_PER_SEC))")
             
             let result = output?.contents().load(as: Float.self)
-            //print(String(format: "%f + %f = %f", data[0], data[1], result as! CVarArg))
+            print(String(format: "%f + %f = %f", data[0], data[1], result as! CVarArg))
             
         }
         self.ResultArea.text = "input"
     }
+    
+    func getTextureDesc(width: Int, heigt: Int, depth: Int, textureType: MTLTextureType, pixelFormat: MTLPixelFormat) -> MTLTextureDescriptor {
+        let textureDes = MTLTextureDescriptor.init()
+        textureDes.textureType = .type2D
+        textureDes.width = 658
+        textureDes.height = 987
+        textureDes.depth = 1
+        textureDes.pixelFormat = .rgba32Float
+        textureDes.usage = [.shaderWrite, .shaderRead]
+        textureDes.storageMode = .shared
+        return textureDes
+    }
+    
     func resizePreviewLayer() {
         videoCapture.previewLayer?.frame = cameraView.bounds
     }
@@ -114,7 +131,8 @@ class ViewController: UIViewController {
             self.videoCapture.start()
           }
         }
-      }
+    }
+    
     func predict(pixelBuffer: CVPixelBuffer) {
     }
 }

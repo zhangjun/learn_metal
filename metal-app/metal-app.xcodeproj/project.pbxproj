@@ -16,6 +16,7 @@
 		181B49C326E36809001A6FF7 /* basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 181B49C226E36809001A6FF7 /* basic.metal */; };
 		181B49C526E36BFD001A6FF7 /* ComputeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B49C426E36BFD001A6FF7 /* ComputeHelper.swift */; };
 		181B49C826E380B0001A6FF7 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B49C726E380B0001A6FF7 /* VideoCapture.swift */; };
+		181B49CA26E39AA5001A6FF7 /* compute.metal in Sources */ = {isa = PBXBuildFile; fileRef = 181B49C926E39AA5001A6FF7 /* compute.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		181B49C226E36809001A6FF7 /* basic.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = basic.metal; sourceTree = "<group>"; };
 		181B49C426E36BFD001A6FF7 /* ComputeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeHelper.swift; sourceTree = "<group>"; };
 		181B49C726E380B0001A6FF7 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		181B49C926E39AA5001A6FF7 /* compute.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = compute.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				181B49C226E36809001A6FF7 /* basic.metal */,
+				181B49C926E39AA5001A6FF7 /* compute.metal */,
 			);
 			path = shaders;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				181B49C526E36BFD001A6FF7 /* ComputeHelper.swift in Sources */,
 				181B49C826E380B0001A6FF7 /* VideoCapture.swift in Sources */,
 				181B49B026E367A0001A6FF7 /* SceneDelegate.swift in Sources */,
+				181B49CA26E39AA5001A6FF7 /* compute.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

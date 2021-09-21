@@ -12,13 +12,18 @@ import simd
 
 class MTLHelper {
     var library: MTLLibrary
-    var device: MTLDevice
+    //var device: MTLDevice
+    public let device: MTLDevice
     var queue: MTLCommandQueue
     
     init?() {
         self.device = MTLCreateSystemDefaultDevice()!
         self.library = device.makeDefaultLibrary()!
         self.queue = device.makeCommandQueue()!
+        guard self.device != nil else {
+            print("Metal is not supported on this device")
+            return
+        }
     }
     
     func makeFunction(name: String) -> MTLComputePipelineState {
@@ -32,20 +37,21 @@ class MTLHelper {
         }
     }
     
-    private func getTextureDesc(width: Int, heigt: Int, depth: Int, textureType: MTLTextureType, pixelFormat: MTLPixelFormat) -> MTLTextureDescriptor {
+    // https://github.com/a1252425/VideoEditor/blob/master/ZSVideoEditor/Metal/MetalInstance.swift
+    private func getTextureDesc(width: Int, height: Int, depth: Int, textureType: MTLTextureType = .type2D, pixelFormat: MTLPixelFormat = .rgba32Float, usage: MTLTextureUsage = [.shaderWrite, .shaderRead], mipmapped: Bool = false) -> MTLTextureDescriptor {
         let textureDes = MTLTextureDescriptor.init()
-        textureDes.textureType = .type2D
-        textureDes.width = 658
-        textureDes.height = 987
-        textureDes.depth = 1
-        textureDes.pixelFormat = .rgba32Float
+        textureDes.textureType = textureType
+        textureDes.width = width
+        textureDes.height = height
+        textureDes.depth = depth
+        textureDes.pixelFormat = pixelFormat
         textureDes.usage = [.shaderWrite, .shaderRead]
         textureDes.storageMode = .shared
         return textureDes
     }
     
-    func makeTexture() -> MTLTexture {
-        let desc = getTextureDesc(width: 300, heigt: 300, depth: 4, textureType: .type2DArray, pixelFormat: .rgba32Float)
+    func makeTexture() -> MTLTexture? {
+        let desc = getTextureDesc(width: 300, height: 300, depth: 4, textureType: .type2DArray, pixelFormat: .rgba32Float)
         return device.makeTexture(descriptor: desc)!
     }
     

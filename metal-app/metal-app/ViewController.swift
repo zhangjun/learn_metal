@@ -9,6 +9,7 @@ import UIKit
 import Vision
 //import CoreMedia
 import AVFoundation
+import os.log
 
 // https://github.com/hollance/MobileNet-CoreML/
 
@@ -87,6 +88,15 @@ class ViewController: UIViewController {
 //            commandBuffer?.addCompletedHandler({(buffer) in
 //                self.ResultArea.text = "input"
 //            })
+            commandBuffer?.addCompletedHandler({(cb) in
+                if #available(iOS 10.3, *) {
+                    let executionDuration = cb.gpuEndTime - cb.gpuStartTime
+                    os_log("gpuTime: %f s.", log: .default, type: .info, executionDuration)
+                } else {
+                    print("gpuTime not supported.")
+                }
+                
+            })
             commandBuffer?.commit()
             commandBuffer?.waitUntilCompleted()
             end = mach_absolute_time()
@@ -134,6 +144,15 @@ class ViewController: UIViewController {
     }
     
     func predict(pixelBuffer: CVPixelBuffer) {
+    }
+    
+    func runSample() {
+        let mtlHelper = MTLHelper()
+        let commandQueue = mtlHelper?.queue
+        guard let commandBuffer = commandQueue?.makeCommandBuffer() else {
+            return
+        }
+        commandBuffer.commit()
     }
 }
 

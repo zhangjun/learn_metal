@@ -84,8 +84,6 @@ const unsigned int bufferSize = arrayLength * sizeof(float);
     _mBufferB = [_mDevice newBufferWithLength:bufferSize options:MTLResourceStorageModeShared];
     _mBufferResult = [_mDevice newBufferWithLength:bufferSize options:MTLResourceStorageModeShared];
     
-    float* ptr = (float*)_mBufferA.contents;
-
     [self generateRandomFloatData:_mBufferA];
     [self generateRandomFloatData:_mBufferB];
 }
@@ -103,20 +101,25 @@ const unsigned int bufferSize = arrayLength * sizeof(float);
     [self encodeAddCommand:computeEncoder];
 
     [commandBuffer setLabel:@"add_array"];
-    [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> cb) {
-        CFTimeInterval executionDuration = cb.GPUEndTime - cb.GPUStartTime;
-        NSLog(@"label: %@, cost: %f", cb.label, executionDuration);
-    }];
+//    [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> cb) {
+//        CFTimeInterval executionDuration = cb.GPUEndTime - cb.GPUStartTime;
+//        CFTimeInterval cpuDuration = cb.kernelEndTime - cb.kernelStartTime;
+//        NSLog(@"label: %@, gpu cost: %f s, kernel: %f s [%f, %f]", cb.label, executionDuration, cpuDuration, cb.kernelStartTime, cb.kernelEndTime);
+//    }];
     // End the compute pass.
     [computeEncoder endEncoding];
 
     // Execute the command.
     [commandBuffer commit];
-    NSLog(@"finish");
+//    NSLog(@"finish");
 
     // Normally, you want to do other work in your app while the GPU is running,
     // but in this example, the code simply blocks until the calculation is complete.
     [commandBuffer waitUntilCompleted];
+    
+    CFTimeInterval executionDuration = commandBuffer.GPUEndTime - commandBuffer.GPUStartTime;
+    CFTimeInterval cpuDuration = commandBuffer.kernelEndTime - commandBuffer.kernelStartTime;
+    NSLog(@"label: %@, gpu cost: %f s, kernel: %f s [%f, %f]", commandBuffer.label, executionDuration, cpuDuration, commandBuffer.kernelStartTime, commandBuffer.kernelEndTime);
 
     [self verifyResults];
 }

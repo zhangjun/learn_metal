@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183E1FC52721B8FC00AA4295 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183E1FC12721B74500AA4295 /* Metal.framework */; };
+		183E1FC72721BB8A00AA4295 /* add.metal in Sources */ = {isa = PBXBuildFile; fileRef = 183E1FC62721BB8A00AA4295 /* add.metal */; };
 		DD81CEA5272164F00039CE61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD81CEA4272164F00039CE61 /* main.m */; };
 		DD81CEAC2721654C0039CE61 /* metal_hepler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD81CEAB2721654C0039CE61 /* metal_hepler.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		183E1FC12721B74500AA4295 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		183E1FC62721BB8A00AA4295 /* add.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = add.metal; path = "metal-macapp/add.metal"; sourceTree = "<group>"; };
 		DD81CEA1272164F00039CE61 /* metal-macapp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "metal-macapp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD81CEA4272164F00039CE61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD81CEAB2721654C0039CE61 /* metal_hepler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = metal_hepler.m; sourceTree = "<group>"; };
@@ -34,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183E1FC52721B8FC00AA4295 /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183E1FC02721B74500AA4295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				183E1FC12721B74500AA4295 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD81CE98272164F00039CE61 = {
 			isa = PBXGroup;
 			children = (
+				183E1FC62721BB8A00AA4295 /* add.metal */,
 				DD81CEA3272164F00039CE61 /* metal-macapp */,
 				DD81CEA2272164F00039CE61 /* Products */,
+				183E1FC02721B74500AA4295 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +139,7 @@
 			files = (
 				DD81CEA5272164F00039CE61 /* main.m in Sources */,
 				DD81CEAC2721654C0039CE61 /* metal_hepler.m in Sources */,
+				183E1FC72721BB8A00AA4295 /* add.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,10 +260,11 @@
 		DD81CEA9272164F00039CE61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -256,10 +273,11 @@
 		DD81CEAA272164F00039CE61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D92M392LA;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

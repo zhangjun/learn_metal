@@ -102,6 +102,11 @@ const unsigned int bufferSize = arrayLength * sizeof(float);
 
     [self encodeAddCommand:computeEncoder];
 
+    [commandBuffer setLabel:@"add_array"];
+    [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> cb) {
+        CFTimeInterval executionDuration = cb.GPUEndTime - cb.GPUStartTime;
+        NSLog(@"label: %@, cost: %f", cb.label, executionDuration);
+    }];
     // End the compute pass.
     [computeEncoder endEncoding];
 
@@ -149,6 +154,18 @@ const unsigned int bufferSize = arrayLength * sizeof(float);
         dataPtr[index] = (float)rand()/(float)(RAND_MAX);
     }
 }
+
+//MTLRegion region = {
+//        {0,0,0},
+//        {image.size.width, image.size.height, 1.0}
+//    };
+//
+//NSUInteger bytesPerRow = image.size.width * 4;
+//[_texture replaceRegion:region
+//                mipmapLevel:0
+//                  withBytes:imageBytes
+//                bytesPerRow:bytesPerRow];
+
 - (void) verifyResults
 {
     float* a = (float*)_mBufferA.contents;

@@ -75,6 +75,7 @@ const unsigned int bufferSize = arrayLength * sizeof(float);
         NSLog(@"Failed to find the command queue.");
         return;
     }
+//    [self startCapture];
 }
 
 - (void) prepareData
@@ -111,6 +112,8 @@ const unsigned int bufferSize = arrayLength * sizeof(float);
 
     // Execute the command.
     [commandBuffer commit];
+    
+//    [self stopCapture];
 //    NSLog(@"finish");
 
     // Normally, you want to do other work in your app while the GPU is running,
@@ -186,4 +189,27 @@ const unsigned int bufferSize = arrayLength * sizeof(float);
     }
     printf("Compute results as expected\n");
 }
+
+#pragma mark - capture
+
+- (void)startCapture {
+    if (@available(iOS 13.0, *)) {
+        MTLCaptureManager* captureManager = [MTLCaptureManager sharedCaptureManager];
+        MTLCaptureDescriptor* captureDescriptor = [[MTLCaptureDescriptor alloc] init];
+        captureDescriptor.captureObject = self->_mDevice;
+
+        NSError* error;
+        if (![captureManager startCaptureWithDescriptor:captureDescriptor error:&error]) {
+            NSLog(@"Failed to start capture, error %@", error);
+        }
+    }
+}
+
+- (void)stopCapture {
+    if (@available(iOS 13.0, *)) {
+        MTLCaptureManager* captureManager = [MTLCaptureManager sharedCaptureManager];
+        [captureManager stopCapture];
+    }
+}
+
 @end
